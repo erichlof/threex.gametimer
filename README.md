@@ -33,5 +33,5 @@ timer.run(frameTime);
 Congratulations, you now have a running stop-clock for your game!  But wait, how can I monitor the seconds going by, and what happens when the alarm goes off?
 
 All timer objects have the following members that you can check for in your game loop:
-* ```timer.alarmSounding``` will be true if the counter reaches the desired number of seconds that you passed into the constructor function, in our case: 7 seconds.  Otherwise it will be false.
+* ```timer.alarmSounding``` will be true if the counter reaches the desired number of seconds that you passed into the constructor function (in our case: 7 seconds).  Otherwise it will be false.
 * ```timer.isRunning```
