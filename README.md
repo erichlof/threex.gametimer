@@ -39,7 +39,7 @@ All timer objects have the following members that you can check for in your game
 * ```timer.alarmTime``` This is the desired number of seconds until the alarm sounds.  In our earlier example, a query to this variable would return 7 (because a (7) was passed into the timer's constructor).  
 
 
-Two other possible methods you can call are ```timer.stop()``` and ```timer.reset()```
+The 3 other methods you can call are ```timer.stop()```  ```timer.reset()```  and ```timer.setAlarm(seconds)```
 * ```timer.stop()``` stops this timer.  It will wait until you call ```timer.run(frameTime)``` again inside the animation loop, and then the timer will start up from where it left off.
 * ```timer.reset()``` will reset this timer to 0.  You then must call ```timer.run(frameTime)``` inside the animation loop to get it going again.  It will still count up to the same target as before.
 * ```timer.setAlarm(seconds)``` Call this method if you would like to change the timer's alarm time. Put the desired number of seconds inside the parentheses.  You can even call this while the timer is running, just as long as it hasn't reached its old target.
