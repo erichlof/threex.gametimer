@@ -1,6 +1,5 @@
 THREEx.GameTimer = function(secondsUntilAlarm) {
 
-
 	this.alarmTime = secondsUntilAlarm || 10;
 
 	this.counter = 0;
@@ -8,7 +7,6 @@ THREEx.GameTimer = function(secondsUntilAlarm) {
 	this.isRunning = false;
 
 	this.alarmSounding = false;
-
 };
 
 THREEx.GameTimer.prototype.run = function(threejsClockDelta) {
