@@ -56,23 +56,23 @@ var timer1 = new THREEx.GameTimer(7);
 var timer2 = new THREEx.GameTimer(3);
 
 function animate(){
-  var frameTime = clock.getDelta();
-  timer1.run(frameTime);
-  timer2.run(frameTime);
+	var frameTime = clock.getDelta();
+	timer1.run(frameTime);
+  	timer2.run(frameTime);
   
-  if(timer1.alarmSounding){
-    //do something
-  }
-  if(timer2.alarmSounding){
-    //do something
-  }
+  	if(timer1.alarmSounding){
+    		//do something
+  	}
+  	if(timer2.alarmSounding){
+    		//do something
+  	}
   
-  if(gameOver){
-    timer1.reset();
-    timer2.stop();
+  	if(gameOver){
+    		timer1.reset();
+    		timer2.stop();
     
-    timer1.setAlarm(5);
-  }
+    		timer1.setAlarm(5);
+  	}
 }
 
 animate();
