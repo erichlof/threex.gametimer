@@ -68,10 +68,10 @@ function animate(){
   	}
   
   	if(gameOver){
-    		timer1.reset();
-    		timer2.stop();
-    
-    		timer1.setAlarm(5);
+    		timer1.stop();
+    		
+    		timer2.reset();
+    		timer2.setAlarm(5);
   	}
 }
 
