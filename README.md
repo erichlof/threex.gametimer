@@ -66,11 +66,11 @@ function animate() {
   		timer2.run(frameTime);
   	
   		if ( timer1.alarmSounding ) {
-    			// do something like
+    			// do something like,
     			makeExplosion();
   		}
   		if ( timer2.alarmSounding ) {
-    			//do something like
+    			// do something like,
     			spawnEnemy();
     			timer2.reset(); // reset timer's counter to 0
   		}
@@ -82,7 +82,7 @@ function animate() {
     		timer1.stop(); // stop timer1 from running
     		
     		timer2.reset(); // reset timer2 to 0, but don't stop it from running
-    		timer2.setAlarm(5); // optionally set alarm for a different amount
+    		timer2.setAlarm(5); // optionally set a different alarm time, in this case: 5 sec.
     		
   	}
   	
