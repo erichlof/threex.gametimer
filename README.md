@@ -52,9 +52,10 @@ Here's a usage example:
 
 ```javascript
 var clock = new THREE.Clock();
+var frameTime = 0;
 var timer1 = new THREEx.GameTimer(7);
 var timer2 = new THREEx.GameTimer(3);
-var frameTime = 0;
+
 
 function animate() {
 
