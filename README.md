@@ -54,30 +54,36 @@ Here's a usage example:
 var clock = new THREE.Clock();
 var timer1 = new THREEx.GameTimer(7);
 var timer2 = new THREEx.GameTimer(3);
+var frameTime = 0;
 
-function animate(){
+function animate() {
 
-	if(playingGame){
-		var frameTime = clock.getDelta();
+	if ( playingGame ) {
+	
+		frameTime = clock.getDelta();
 		timer1.run(frameTime);
   		timer2.run(frameTime);
   	
-  		if(timer1.alarmSounding){
-    		//do something
+  		if ( timer1.alarmSounding ) {
+    			//do something
   		}
-  		if(timer2.alarmSounding){
-    		//do something
+  		if ( timer2.alarmSounding ) {
+    			//do something
+    			timer2.reset();
   		}
+  		
   	}
   	
-  	if(gameOver){
-    		timer1.stop();
+  	if ( gameOver ) {
+  	
+    		timer1.stop(); // stop timer1 but don't reset it to 0
     		
-    		timer2.reset();
-    		timer2.setAlarm(5);
+    		timer2.reset(); // reset timer2 to 0, but don't stop it from running
+    		timer2.setAlarm(5); // optionally set alarm for a different amount
+    		
   	}
   	
-}
+} // end function animate()
 
 animate();
 ```
