@@ -53,8 +53,8 @@ Here's a usage example:
 ```javascript
 var clock = new THREE.Clock();
 var frameTime = 0;
-var timer1 = new THREEx.GameTimer(7);
-var timer2 = new THREEx.GameTimer(3);
+var timer1 = new THREEx.GameTimer(20); // alarm will sound at 20 seconds
+var timer2 = new THREEx.GameTimer(7); // alarm will sound at 7 seconds
 
 
 function animate() {
@@ -66,18 +66,20 @@ function animate() {
   		timer2.run(frameTime);
   	
   		if ( timer1.alarmSounding ) {
-    			//do something
+    			// do something like
+    			makeExplosion();
   		}
   		if ( timer2.alarmSounding ) {
-    			//do something
-    			timer2.reset();
+    			//do something like
+    			spawnEnemy();
+    			timer2.reset(); // reset timer's counter to 0
   		}
   		
   	}
   	
   	if ( gameOver ) {
   	
-    		timer1.stop(); // stop timer1 but don't reset it to 0
+    		timer1.stop(); // stop timer1 from running
     		
     		timer2.reset(); // reset timer2 to 0, but don't stop it from running
     		timer2.setAlarm(5); // optionally set alarm for a different amount
